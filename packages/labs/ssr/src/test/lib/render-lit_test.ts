@@ -1400,14 +1400,14 @@ for (const global of [emptyVmGlobal, shimmedVmGlobal]) {
       );
       assert.is(
         result,
-        '<!--lit-part gZU30y7yqRY=--><test-events-parent><template shadowroot="open" shadowrootmode="open"><style>\n' +
+        '<!--lit-part gZU30y7yqRY=--><test-events-parent><template shadowrootmode="open"><style>\n' +
           '    :host {\n' +
           '      display: block;\n' +
           '    }\n' +
           '  </style><!--lit-part LLTdYazTGBk=--><main><slot></slot></main><!--/lit-part--></template>' +
-          '<test-events-child data-test><template shadowroot="open" shadowrootmode="open"><!--lit-part Ux1Wl2m85Zk=-->' +
+          '<test-events-child data-test><template shadowrootmode="open"><!--lit-part Ux1Wl2m85Zk=-->' +
           '<div>events child</div><!--/lit-part--></template></test-events-child>' +
-          '<test-events-child-inert><template shadowroot="open" shadowrootmode="open"><!--lit-part qwEoALVvGsQ=--><div>events child inert</div><!--/lit-part--></template>' +
+          '<test-events-child-inert><template shadowrootmode="open"><!--lit-part qwEoALVvGsQ=--><div>events child inert</div><!--/lit-part--></template>' +
           '</test-events-child-inert></test-events-parent><!--/lit-part-->'
       );
       // structuredClone is necessary, as the identity across module loader is not equal.
@@ -1436,7 +1436,7 @@ for (const global of [emptyVmGlobal, shimmedVmGlobal]) {
     const result = await render(noSsrTemplate);
     assert.is(
       result,
-      '<!--lit-part 2fjWohnOnvA=--><test-simple><template shadowroot="open" shadowrootmode="open"><!--lit-part UNbWrd8S5FY=--><main></main><!--/lit-part--></template></test-simple>' +
+      '<!--lit-part 2fjWohnOnvA=--><test-simple><template shadowrootmode="open"><!--lit-part UNbWrd8S5FY=--><main></main><!--/lit-part--></template></test-simple>' +
         '<no-ssr></no-ssr><!--/lit-part-->'
     );
   });
